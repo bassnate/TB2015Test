@@ -65,9 +65,12 @@ public class Robot extends IterativeRobot {
      * This function is called periodically during operator control
      */
     public void teleopPeriodic() {
-        myRobot.arcadeDrive(stick);
-        myRobot.arcadeDrive(0.5,0);
-        if(button 4){myRobot.arcadeDrive(0,0);}
+        int drvspd = 0;
+    	// myRobot.arcadeDrive(stick);
+        myRobot.arcadeDrive(drvspd,0);
+        
+        if(stick.getRawButton(4)){drvspd = 0.5;}
+        if(stick.getRawButton(2)){drvspd = 0;}
     }
     
     /**
