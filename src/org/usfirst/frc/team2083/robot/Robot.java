@@ -68,11 +68,15 @@ public class Robot extends IterativeRobot {
         int drvspd = 0;
     	 myRobot.arcadeDrive(stick);
         int staples = 1;
-        while(staples == 1){
+        while(staples == 1)
+        {
         	myRobot.arcadeDrive(drvspd,0);
         
         	if(stick.getRawButton(1)){drvspd = 1;}
-        	if(stick.getRawButton(2)){drvspd = 0;}
+        	if(stick.getRawButton(2)){
+        		drvspd = 0;
+        		staples = 2;
+        	}
         }
         //if (stick.getRawButton(2)) {
         //myRobot.drive(0.2,0)
