@@ -69,8 +69,8 @@ public class Robot extends IterativeRobot {
     	// myRobot.arcadeDrive(stick);
         myRobot.arcadeDrive(drvspd,0);
         
-        if(stick.getRawButton(4)){drvspd = 0.5;}
-        if(stick.getRawButton(2)){drvspd = 0;}
+        if(stick.getRawButton(0)){drvspd = 0.5;}
+        if(stick.getRawButton(1)){drvspd = 0;}
     }
     
     /**
